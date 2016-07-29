@@ -1,0 +1,65 @@
+
+<div class="container">
+    <div [hidden] ="submitted">
+        <h2>Select Filters to Import Data</h2>
+        <form *ngIf="active" (ngSubmit)="onSubmit()" #filterForm="ngForm">
+            {{diagnostic}}
+            <div class="form-group">
+                <label for="monthRange">Month Range</label>
+                <select class="form-control" [(ngModel)]="model.monthRange"
+                 name="monthRange" #monthRange="ngModel" required>                  
+                    <option *ngFor = "let m of monthRanges" [value] = "m">{{m.name}}</option>
+                </select>
+                <div [hidden]="monthRange.valid || monthRange.pristine" class="alert alert-danger">
+                     Month Range is required
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lob">LOB</label>
+                <select class="form-control" [(ngModel)]="model.lob" 
+                name="lob" #lob="ngModel" required>                   
+                    <option *ngFor = "let l of lobs" [value] = "l">{{l.name}}</option>
+                </select>
+                <div [hidden]="lob.valid || lob.pristine" class="alert alert-danger">
+                     Lob is required
+                </div>
+            </div>    
+
+            <div class="form-group">
+                <label for="msFunction">Function</label>
+                <select class="form-control" [(ngModel)]="model.msFunction" 
+                name="msFunction" #msFunction="ngModel" required>                    
+                    <option *ngFor = "let f of msFunctions" [value] = "f">{{f.name}}</option>
+                </select>
+                <div [hidden]="msFunction.valid || msFunction.pristine" class="alert alert-danger">
+                     Function is required
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="region">Region</label>
+                <select class="form-control" [(ngModel)]= "model.region" 
+                name="region" #region="ngModel" required>                    
+                    <option *ngFor = "let region of regions" [value] = "region">{{region.name}}</option>
+                </select>
+                <div [hidden]="region.valid || region.pristine" class="alert alert-danger">
+                     Region is required
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="roc">ROC</label>
+                <select class="form-control" [(ngModel)]="model.roc" 
+                name="roc" #roc="ngModel" required>                   
+                    <option *ngFor = "let roc of rocs" [value] = "roc">{{roc.name}}</option>
+                </select>
+                 <div [hidden]="roc.valid || roc.pristine" class="alert alert-danger">
+                     ROC is required
+                </div>
+            </div>
+        
+            <button type="submit" class="btn btn-default" [disabled]="!filterForm.form.valid">Apply</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+{
+    "data":
+    [
+        {
+            "id":1,
+            "name":"Full FY"
+        },
+        {
+            "id":2,
+            "name":"To end of FY"
+        },
+        {
+             "id":3,
+            "name":"July"
+        },
+        {
+             "id":4,
+            "name":"August"
+        },
+        {
+             "id":5,
+            "name":"September"
+        },
+        {
+             "id":6,
+            "name":"October"
+        },
+        {
+             "id":7,
+            "name":"November"
+        },
+        {
+             "id":8,
+            "name":"December"
+        },
+        {
+             "id":9,
+            "name":"January"
+        },
+        {
+             "id":10,
+            "name":"February"
+        },
+        {
+             "id":11,
+            "name":"March"
+        },
+        {
+             "id":12,
+            "name":"April"
+        },
+        {
+             "id":13,
+            "name":"May"
+        },
+        {
+             "id":14,
+            "name":"June"
+        }
+
+    ]
+}
